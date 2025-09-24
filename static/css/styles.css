@@ -1,0 +1,52 @@
+.home-head-font {
+  font-family: "DynaPuff", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.home-head-font .nav-link {
+  color: whitesmoke !important;
+}
+
+section, div, article {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#unique-blue {
+  color: rgb(91, 204, 249) !important;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar-nav .nav-link {
+  border: none !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+  position: relative;
+  color: whitesmoke;
+}
+
+/* Blue underline only for active link */
+.navbar-nav .nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;                   /* adjust distance from text */
+  height: 2px;                 /* thickness of underline */
+  width: 100%;                 /* full width of link */
+  background-color: rgb(91, 204, 249); /* blue color */
+}
+
