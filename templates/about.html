@@ -1,114 +1,151 @@
 {% extends 'base.html' %} {% block content %}
 
-<body
-  class="bg-whitesmoke"
-  style="background-image: url('{{ url_for('static', filename='assets/about-bg.jpg') }}'); 
-         background-size: cover;
-         background-position: center;"
->
-  <main>
-    <div class="container-fluid overflow-hidden">
-      <div class="row my-3 mx-4">
-        <div
-          class="col-6 d-flex flex-column justify-content-center align-items-center"
-        >
-          <div class="about-img">
-            <img
-              class="img-fluid"
-              src="{{ url_for('static', filename='assets/about.jpg') }}"
-              alt="Photo of me"
-              style="
-                max-height: 80vh;
-                object-fit: contain;
-                object-position: center;
-              "
-            />
-          </div>
-        </div>
-        <div
-          class="col-6 d-flex flex-column justify-content-center align-items-left"
-        >
-          <div>
-            <h4
-              class="px-5 py-1 home-head-font"
-              style="font-weight: normal; color: rgb(5, 136, 188)"
-            >
-              Education & Work Eperience
-            </h4>
-          </div>
-          <div class="px-5 py-1 about-body-font">
-            <p>
-              Throughout my entire adult life, I have been searching to build a
-              better version of myself and get better at what I do. Yet, there
-              was always this lingering feeling of “I do not belong here” or “my
-              full potential is trapped.” Let me start from the beginning.
-            </p>
-            <p>
-              Fascinated by other cultures, this journey of mine started by
-              applying for a Bachelor’s degree in English Translation, which led
-              me to my first job and eventually becoming an ESL teacher. These
-              experiences allowed me to gain priceless interpersonal skills,
-              adapt to diverse work environments, and, most importantly,
-              developing a creative mind to develop effective solutions.
-            </p>
-            <p>
-              Despite these achievements, something was missing. I had been so
-              blind of my passion for technology and computer science, even
-              though I used to spend hours and hours behind the computer. In
-              2022, it hit me to enroll in an online course by HarvardX,
-              Introduction to Computer Science. The time for the big change was
-              already at my doorstep without me even knowing it! I remember the
-              days I struggled for hours, but there was something dragging me
-              along and holding me to that chair; something that made me spent
-              countless hours exploring and learning on my own. That something
-              was THE thing that I was looking for all these years, a true
-              passion. In 2024, I applied for a Master’s degree in Information
-              Technology and graduated with a GPA of 3.7 as the second best in
-              the department. Currently, I am looking forward to finding a
-              position related to this field with excitement.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="row my-5 mx-4">
-        <div
-          class="col-6 d-flex flex-column justify-content-center align-items-left"
-        >
-          <div>
-            <h4
-              class="px-5 py-1 home-head-font"
-              style="font-weight: normal; color: rgb(5, 136, 188)"
-            >
-              Hobbies & Interests
-            </h4>
-          </div>
-          <div class="px-5 py-1 about-body-font">
-            <p>
-              Throughout my entire adult life, I have been searching to build a
-              better version of myself and get better at what I do. Yet, there
-              was always this lingering feeling of “I do not belong here” or “my
-              full potential is trapped.” Let me start from the beginning.
-            </p>
-          </div>
-        </div>
-        <div
-          class="col-6 d-flex flex-column justify-content-center align-items-center"
-        >
-          <div class="about-img">
-            <img
-              class="img-fluid"
-              src="{{ url_for('static', filename='assets/about.jpg') }}"
-              alt="Photo of me"
-              style="
-                max-height: 70vh;
-                object-fit: contain;
-                object-position: center;
-              "
-            />
-          </div>
-        </div>
+<main class="container-fluid">
+  <div class="row mb-5 mt-3">
+    <div
+      class="col-6 d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="about-img">
+        <img
+          class="img-fluid"
+          src="{{ url_for('static', filename='assets/about.jpg') }}"
+          alt="Photo of me"
+          style="max-height: 80vh; object-fit: contain; object-position: center"
+        />
       </div>
     </div>
-  </main>
-</body>
+    <div
+      class="col-6 d-flex flex-column justify-content-start align-items-start"
+      style="padding-right: 100px"
+    >
+      <div>
+        <h2
+          class="home-head-font"
+          style="font-weight: normal; color: rgb(5, 136, 188)"
+        >
+          Education & Work Eperience
+        </h2>
+      </div>
+      <div class="about-body-font">
+        <p>
+          Throughout my entire adult life, I have been searching to build a
+          better version of myself and get better at what I do. Yet, there was
+          always this lingering feeling of “I do not belong here” or “my full
+          potential is trapped.” Let me start from the beginning.
+        </p>
+        <p>
+          Fascinated by other cultures, this journey of mine started by applying
+          for a Bachelor’s degree in English Translation, which led me to my
+          first job and eventually becoming an ESL teacher. These experiences
+          allowed me to gain priceless interpersonal skills, adapt to diverse
+          work environments, and, most importantly, developing a creative mind
+          to develop effective solutions.
+        </p>
+        <p>
+          Despite these achievements, something was missing. I had been so blind
+          of my passion for technology and computer science, even though I used
+          to spend hours and hours behind the computer. In 2022, it hit me to
+          enroll in an online course by HarvardX, Introduction to Computer
+          Science. The time for the big change was already at my doorstep
+          without me even knowing it! I remember the days I struggled for hours,
+          but there was something dragging me along and holding me to that
+          chair; something that made me spent countless hours exploring and
+          learning on my own. That something was THE thing that I was looking
+          for all these years, a true passion. In 2024, I applied for a Master’s
+          degree in Information Technology and graduated with a GPA of 3.7 as
+          the second best in the department. Currently, I am looking forward to
+          finding a position related to this field with excitement.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="background-color: black">
+    <div class="col-12 text-center">
+      <h2
+        class="mt-5 home-head-font"
+        style="font-weight: normal; color: crimson"
+      >
+        Hobbies & Interests
+      </h2>
+    </div>
+  </div>
+  <div class="row" style="background-color: black">
+    <div
+      class="col-6 py-5 d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="hob-img">
+        <img
+          class="img-fluid"
+          src="{{ url_for('static', filename='assets/dota.jpg') }}"
+          alt="Photo of me"
+          style="max-height: 70vh; object-fit: contain; object-position: center"
+        />
+      </div>
+    </div>
+    <div
+      class="col-6 d-flex flex-column justify-content-center align-items-left"
+    >
+      <div class="px-5 py-1 about-body-font">
+        <p style="color: whitesmoke">
+          Throughout my entire adult life, I have been searching to build a
+          better version of myself and get better at what I do. Yet, there was
+          always this lingering feeling of “I do not belong here” or “my full
+          potential is trapped.” Let me start from the beginning.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="background-color: black">
+    <div
+      class="col-6 d-flex flex-column justify-content-center align-items-left"
+    >
+      <div class="px-5 py-1 about-body-font">
+        <p style="color: whitesmoke">
+          Throughout my entire adult life, I have been searching to build a
+          better version of myself and get better at what I do. Yet, there was
+          always this lingering feeling of “I do not belong here” or “my full
+          potential is trapped.” Let me start from the beginning.
+        </p>
+      </div>
+    </div>
+    <div
+      class="col-6 d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="hob-img">
+        <img
+          class="img-fluid"
+          src="{{ url_for('static', filename='assets/v.jpg') }}"
+          alt="Photo of me"
+          style="max-height: 70vh; object-fit: contain; object-position: center"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row" style="background-color: black">
+    <div
+      class="col-6 py-5 d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="hob-img">
+        <img
+          class="img-fluid"
+          src="{{ url_for('static', filename='assets/daytona.jpg') }}"
+          alt="Photo of me"
+          style="max-height: 70vh; object-fit: contain; object-position: center transform: scaleX(-1)"
+        />
+      </div>
+    </div>
+    <div
+      class="col-6 d-flex flex-column justify-content-center align-items-left"
+    >
+      <div class="px-5 py-1 about-body-font">
+        <p style="color: whitesmoke">
+          Throughout my entire adult life, I have been searching to build a
+          better version of myself and get better at what I do. Yet, there was
+          always this lingering feeling of “I do not belong here” or “my full
+          potential is trapped.” Let me start from the beginning.
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
 {% endblock %}

@@ -17,17 +17,6 @@ section, div, article {
     box-shadow: none;
 }
 
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
 .navbar .nav-link.active {
   color: rgb(5, 136, 188) !important;
 }
@@ -40,10 +29,27 @@ body.bg-black .nav-link {
   color: whitesmoke !important;
 }
 
-.about-img img {
+.about-img {
   box-shadow: 0px 0px 5px 5px rgb(91, 204, 249);
 }
 
+.hob-image {
+  width: 1920;
+  height: 1080;
+}
 
+.navbar-transparent {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
 
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

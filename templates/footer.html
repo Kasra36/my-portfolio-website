@@ -1,7 +1,13 @@
-<footer class="mt-4 mb-4 fade-in text-center" style="animation-delay: 6s">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-6">
+{% if request.path == '/'%}
+<div
+  class="container-fluid row mt-4 mb-4 text-center fade-in"
+  style="animation-delay: 4s"
+>
+  <div class="col-6">
+    {% else %}
+    <div class="container-fluid row mt-4 mb-4 text-center">
+      <div class="col-12">
+        {% endif %}
         <a
           href="https://github.com/kasra36"
           target="_blank"
@@ -43,4 +49,4 @@
       <div class="col-6"></div>
     </div>
   </div>
-</footer>
+</div>
