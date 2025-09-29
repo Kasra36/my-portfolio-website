@@ -1,52 +1,32 @@
-{% if request.path == '/'%}
-<div
-  class="container-fluid row mt-4 mb-4 text-center fade-in"
-  style="animation-delay: 4s"
->
-  <div class="col-6">
-    {% else %}
-    <div class="container-fluid row mt-4 mb-4 text-center">
-      <div class="col-12">
-        {% endif %}
-        <a
-          href="https://github.com/kasra36"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="mx-2"
-          aria-label="GitHub"
-        >
-          <img
-            src="{{ url_for('static', filename='assets/github.svg') }}"
-            width="40"
-            height="40"
-            alt="GitHub"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/hoseintajali/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="mx-2"
-          aria-label="LinkedIn"
-        >
-          <img
-            src="{{ url_for('static', filename='assets/linkedin.svg') }}"
-            width="40"
-            height="40"
-            alt="LinkedIn"
-          />
-        </a>
-        {% if request.endpoint == 'home' %}
-        <p class="py-2 home-head-font" style="color: whitesmoke">
-          © 2025 Company, Inc. All rights reserved.
-        </p>
-        {% elif request.endpoint == 'about' %}
-        <p class="py-2 home-head-font" style="color: rgb(91, 204, 249)">
-          © 2025 Company, Inc. All rights reserved.
-        </p>
-        {% endif %}
-      </div>
-      <div class="col-6"></div>
-    </div>
-  </div>
+<div class="text-center" style="background-color: transparent;">
+  <a
+    href="https://github.com/kasra36"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="mx-2"
+    aria-label="GitHub"
+  >
+    <img
+      src="{{ url_for('static', filename='assets/github.svg') }}"
+      width="40"
+      height="40"
+      alt="GitHub"
+    />
+  </a>
+  <a
+    href="https://www.linkedin.com/in/hoseintajali/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="mx-2"
+    aria-label="LinkedIn"
+  >
+    <img
+      src="{{ url_for('static', filename='assets/linkedin.svg') }}"
+      width="40"
+      height="40"
+      alt="LinkedIn"
+    />
+  </a>
+  <p class="py-2 home-head-font">
+    © 2025 Company, Inc. All rights reserved.
 </div>

@@ -1,151 +1,208 @@
 {% extends 'base.html' %} {% block content %}
-
-<main class="container-fluid">
-  <div class="row mb-5 mt-3">
-    <div
-      class="col-6 d-flex flex-column justify-content-center align-items-center"
-    >
-      <div class="about-img">
-        <img
-          class="img-fluid"
-          src="{{ url_for('static', filename='assets/about.jpg') }}"
-          alt="Photo of me"
-          style="max-height: 80vh; object-fit: contain; object-position: center"
-        />
+<body class=>
+  <header class="row header-custom mb-4" style="left: 26%;">{% include 'header.html' %}</header>
+  <main>
+    <div class="row">
+      <div
+        class="col-6"
+      >
+        <figure class="text-center">
+          <a href="https://flowcv.com/resume/26n68sks587c" target="_blank">
+            <img
+              class="img-fluid about-img"
+              src="{{ url_for('static', filename='assets/about.jpg') }}"
+              alt="Photo of me"
+              style="
+                max-height: 80vh;
+                object-fit: contain;
+                object-position: center;
+              "
+            />
+          </a>
+          <figcaption
+            class="mt-3 about-body-font"
+            style="font-size: medium; color: black"
+          >
+            <strong>⬆ My Resume ⬆</strong>
+          </figcaption>
+        </figure>
+      </div>
+      <div
+        class="col-6"
+        style="padding-right: 100px"
+      >
+        <div>
+          <h2
+            class="home-head-font"
+            style="font-weight: normal; color: rgb(5, 136, 188)"
+          >
+            Education & Work Eperience
+          </h2>
+        </div>
+        <div class="about-body-font">
+          <p>
+            Throughout my entire adult life, my preliminary goal was to be good
+            at what I do and build a better version of myself in terms of skill
+            sets and knowledge. Yet, there was always this lingering feeling of
+            “I do not belong here” or “my full potential is trapped.” Let me
+            start from the beginning.
+          </p>
+          <p>
+            Fascinated by other cultures, this journey of mine started by
+            enrolling in a Bachelor’s degree in English Translation, which led
+            me to my first job and eventually becoming an ESL teacher. These
+            experiences allowed me to gain priceless interpersonal skills, adapt
+            to diverse work environments, and, most importantly, developing a
+            creative mind to develop effective solutions.
+          </p>
+          <p>
+            Despite these achievements, something was missing. I had been so
+            blind of my passion for technology and computer science, even though
+            I used to spend hours and hours behind the computer. In 2022, it hit
+            me to enroll in an online course by HarvardX, Introduction to
+            Computer Science. The time for the big change was already at my
+            doorstep without me even knowing it! I remember the days I struggled
+            for hours, but there was something dragging me along and holding me
+            to that chair; something that made me spent countless hours
+            exploring and learning on my own. That something was THE thing that
+            I was looking for all these years, a true passion. In 2024, I
+            applied for a Master’s degree in Information Technology and
+            graduated with a GPA of 3.7 as the second best in the department.
+            Currently, I am looking forward to finding a position related to
+            this field with excitement.
+          </p>
+        </div>
       </div>
     </div>
-    <div
-      class="col-6 d-flex flex-column justify-content-start align-items-start"
-      style="padding-right: 100px"
-    >
-      <div>
+    <div class="row" style="background-color: black">
+      <div class="col-12 text-center">
         <h2
-          class="home-head-font"
-          style="font-weight: normal; color: rgb(5, 136, 188)"
+          class="mt-5 home-head-font"
+          style="font-weight: normal; color: crimson"
         >
-          Education & Work Eperience
+          Hobbies & Interests
         </h2>
       </div>
-      <div class="about-body-font">
-        <p>
-          Throughout my entire adult life, I have been searching to build a
-          better version of myself and get better at what I do. Yet, there was
-          always this lingering feeling of “I do not belong here” or “my full
-          potential is trapped.” Let me start from the beginning.
-        </p>
-        <p>
-          Fascinated by other cultures, this journey of mine started by applying
-          for a Bachelor’s degree in English Translation, which led me to my
-          first job and eventually becoming an ESL teacher. These experiences
-          allowed me to gain priceless interpersonal skills, adapt to diverse
-          work environments, and, most importantly, developing a creative mind
-          to develop effective solutions.
-        </p>
-        <p>
-          Despite these achievements, something was missing. I had been so blind
-          of my passion for technology and computer science, even though I used
-          to spend hours and hours behind the computer. In 2022, it hit me to
-          enroll in an online course by HarvardX, Introduction to Computer
-          Science. The time for the big change was already at my doorstep
-          without me even knowing it! I remember the days I struggled for hours,
-          but there was something dragging me along and holding me to that
-          chair; something that made me spent countless hours exploring and
-          learning on my own. That something was THE thing that I was looking
-          for all these years, a true passion. In 2024, I applied for a Master’s
-          degree in Information Technology and graduated with a GPA of 3.7 as
-          the second best in the department. Currently, I am looking forward to
-          finding a position related to this field with excitement.
-        </p>
-      </div>
     </div>
-  </div>
-  <div class="row" style="background-color: black">
-    <div class="col-12 text-center">
-      <h2
-        class="mt-5 home-head-font"
-        style="font-weight: normal; color: crimson"
+    <div class="row text-pos" style="background-color: black">
+      <div
+        class="col-6 py-3"
       >
-        Hobbies & Interests
-      </h2>
-    </div>
-  </div>
-  <div class="row" style="background-color: black">
-    <div
-      class="col-6 py-5 d-flex flex-column justify-content-center align-items-center"
-    >
-      <div class="hob-img">
-        <img
-          class="img-fluid"
-          src="{{ url_for('static', filename='assets/dota.jpg') }}"
-          alt="Photo of me"
-          style="max-height: 70vh; object-fit: contain; object-position: center"
-        />
+        <div class="hob-img">
+          <img
+            class="img-fluid"
+            src="{{ url_for('static', filename='assets/dota.jpg') }}"
+            alt="Photo of me"
+            style="
+              max-height: 70vh;
+              object-fit: contain;
+              object-position: center;
+            "
+          />
+        </div>
+      </div>
+      <div
+        class="col-6"
+      >
+        <div class="px-5 py-1 about-body-font">
+          <p style="color: whitesmoke;">
+            <strong>Dota 2</strong> is my favorite video game, and it has been a
+            big part of my free time since 2017. Over the years, I have
+            dedicated more than 4,300 hours to playing it, which reflects not
+            only my passion but also the depth of my engagement with the game. I
+            consider myself a true fan, not just of playing, but also of
+            following the competitive scene. Every year, I eagerly watch The
+            International, Dota 2’s biggest tournament, where the best teams
+            from around the world compete for glory, if not for million-dollar
+            prizes. I enjoy supporting my favorite players and teams, analyzing
+            their strategies, and sometimes even trying to apply what I’ve
+            learned to my own gameplay. For me, Dota 2 is more than just a
+            pastime; it is both a source of entertainment and a way to connect
+            with a global community of players and fans.
+          </p>
+        </div>
       </div>
     </div>
-    <div
-      class="col-6 d-flex flex-column justify-content-center align-items-left"
-    >
-      <div class="px-5 py-1 about-body-font">
-        <p style="color: whitesmoke">
-          Throughout my entire adult life, I have been searching to build a
-          better version of myself and get better at what I do. Yet, there was
-          always this lingering feeling of “I do not belong here” or “my full
-          potential is trapped.” Let me start from the beginning.
-        </p>
+    <div class="row text-pos" style="background-color: black">
+      <div
+        class="col-6"
+      >
+        <div class="px-5 py-1 about-body-font">
+          <p style="color: whitesmoke">
+            <strong>V for Vendetta</strong>, a masterpiece, a philosophy, the
+            world unmasked. This film changed my life forever. It taught me what
+            belief truly means and how deeply we are meant to hold on to our
+            values, even when the world challenges them. I have watched it more
+            than a dozen times, and each viewing feels like the first, bringing
+            me the same excitement and inspiration to the moon and back. To some
+            audiences, it may appear as just another superhero movie with
+            fantasy elements. But to me, it is nothing less than a modern
+            tragedy, a poetic reflection on freedom, identity, and resistance.
+            It captures the art of life and war, reminding us how crucial it is
+            to fight back against oppression and to strive to make things right,
+            even when the odds seem impossible.
+          </p>
+        </div>
+      </div>
+      <div
+        class="col-6"
+      >
+        <div class="hob-img">
+          <img
+            class="img-fluid"
+            src="{{ url_for('static', filename='assets/v.jpg') }}"
+            alt="Photo of me"
+            style="
+              max-height: 70vh;
+              object-fit: contain;
+              object-position: center;
+            "
+          />
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row" style="background-color: black">
-    <div
-      class="col-6 d-flex flex-column justify-content-center align-items-left"
-    >
-      <div class="px-5 py-1 about-body-font">
-        <p style="color: whitesmoke">
-          Throughout my entire adult life, I have been searching to build a
-          better version of myself and get better at what I do. Yet, there was
-          always this lingering feeling of “I do not belong here” or “my full
-          potential is trapped.” Let me start from the beginning.
-        </p>
+    <div class="row text-pos" style="background-color: black">
+      <div
+        class="col-6 py-5"
+      >
+        <div class="hob-img">
+          <img
+            class="img-fluid"
+            src="{{ url_for('static', filename='assets/daytona.jpg') }}"
+            alt="Photo of me"
+            style="max-height: 70vh; object-fit: contain; object-position: center;"
+          />
+        </div>
+      </div>
+      <div
+        class="col-6"
+      >
+        <div class="px-5 py-1 about-body-font" style="color: whitesmoke">
+          <p>
+            <strong>Die-cast Model Cars</strong>
+          </p>
+
+          <p>
+            I believe everyone should have a collection that reflects their
+            personal interests. For me, as a lifelong car enthusiast, collecting
+            die-cast model cars is more than just a hobby, it’s a passion.
+            There’s something deeply satisfying about curating a collection that
+            represents both your taste and your dedication.
+          </p>
+          <p>
+            When most people hear the word collection, they often imagine rare,
+            high-value items that require significant financial investment. But
+            a collection doesn’t have to be expensive to be meaningful. My own
+            collection consists of models from a variety of brands, many of
+            which are quite affordable. What matters most is the joy and sense
+            of fulfillment I get from expanding it whenever I find a new piece.
+            Over time, each car becomes a story, a memory, and a small
+            reflection of the larger automotive world that fascinates me.
+          </p>
+        </div>
       </div>
     </div>
-    <div
-      class="col-6 d-flex flex-column justify-content-center align-items-center"
-    >
-      <div class="hob-img">
-        <img
-          class="img-fluid"
-          src="{{ url_for('static', filename='assets/v.jpg') }}"
-          alt="Photo of me"
-          style="max-height: 70vh; object-fit: contain; object-position: center"
-        />
-      </div>
-    </div>
-  </div>
-  <div class="row" style="background-color: black">
-    <div
-      class="col-6 py-5 d-flex flex-column justify-content-center align-items-center"
-    >
-      <div class="hob-img">
-        <img
-          class="img-fluid"
-          src="{{ url_for('static', filename='assets/daytona.jpg') }}"
-          alt="Photo of me"
-          style="max-height: 70vh; object-fit: contain; object-position: center transform: scaleX(-1)"
-        />
-      </div>
-    </div>
-    <div
-      class="col-6 d-flex flex-column justify-content-center align-items-left"
-    >
-      <div class="px-5 py-1 about-body-font">
-        <p style="color: whitesmoke">
-          Throughout my entire adult life, I have been searching to build a
-          better version of myself and get better at what I do. Yet, there was
-          always this lingering feeling of “I do not belong here” or “my full
-          potential is trapped.” Let me start from the beginning.
-        </p>
-      </div>
-    </div>
-  </div>
-</main>
+  </main>
+  <footer class="row" style="background-color: black; color: rgb(91, 204, 249);">{% include 'footer.html' %}</footer>
+</body>
 {% endblock %}

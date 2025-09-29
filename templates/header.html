@@ -1,43 +1,35 @@
-{% if request.path=='/' %}
-<div class="row container-fluid fade-in" style="animation-delay: 4s">
-  {% else %}
-  <div class="row container-fluid">
-    {% endif %}
-      <nav
-        class="navbar col-6 home-head-font justify-content-center"
-        style="background-color: transparent"
+<nav
+  class="navbar home-head-font"
+  style="background-color: transparent"
+>
+  <ul class="navbar-nav flex-row">
+    <li class="nav-item px-2">
+      <a
+        class="nav-link {% if request.path == url_for('home') %}active{% endif %}"
+        href="{{ url_for('home') }}"
+        >Home</a
       >
-        <ul class="navbar-nav flex-row">
-          <li class="nav-item px-2">
-            <a
-              class="nav-link {% if request.path == url_for('home') %}active{% endif %}"
-              href="{{ url_for('home') }}"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item px-2">
-            <a
-              class="nav-link {% if request.path == url_for('projects') %}active{% endif %}"
-              href="{{ url_for('projects') }}"
-              >Projects</a
-            >
-          </li>
-          <li class="nav-item px-2">
-            <a
-              class="nav-link {% if request.path == url_for('about') %}active{% endif %}"
-              href="{{ url_for('about') }}"
-              >About</a
-            >
-          </li>
-          <li class="nav-item px-2">
-            <a
-              class="nav-link {% if request.path == url_for('contact') %}active{% endif %}"
-              href="{{ url_for('contact') }}"
-              >Contact</a
-            >
-          </li>
-        </ul>
-      </nav>
-    <div class="col-6"></div>
-  </div>
-</div>
+    </li>
+    <li class="nav-item px-2">
+      <a
+        class="nav-link {% if request.path == url_for('projects') %}active{% endif %}"
+        href="{{ url_for('projects') }}"
+        >Projects</a
+      >
+    </li>
+    <li class="nav-item px-2">
+      <a
+        class="nav-link {% if request.path == url_for('about') %}active{% endif %}"
+        href="{{ url_for('about') }}"
+        >About</a
+      >
+    </li>
+    <li class="nav-item px-2">
+      <a
+        class="nav-link {% if request.path == url_for('contact') %}active{% endif %}"
+        href="{{ url_for('contact') }}"
+        >Contact</a
+      >
+    </li>
+  </ul>
+</nav>

@@ -1,15 +1,16 @@
 {% extends 'base.html' %} {% block content %}
 
 <body class="bg-black">
+  <header class="fade-in header-custom" style="animation-delay: 4s; left: 25%;">{% include 'header.html' %}</header>
   <main>
     <div class="container-fluid overflow-hidden">
       <div class="row" style="padding-left: 1cm">
         <div
-          class="col-6 py-4 d-flex flex-column justify-content-center align-items-center"
+          class="col-6 py-4 d-flex flex-column justify-content-start align-items-center"
         >
-          <div class="home-head-font px-1">
+          <div class="home-head-font mt-5 px-1">
             <div class="px-3 py-4 fade-in" style="animation-delay: 2.5s">
-              <h1 class="display-2" style="color: rgb(5, 136, 188)">
+              <h1 class="display-2" style="color: rgb(91, 204, 249)">
                 Welcome Visitor..!
               </h1>
             </div>
@@ -44,5 +45,11 @@
       </div>
     </div>
   </main>
+  <footer
+    class="footer-custom fade-in"
+    style="animation-delay: 4s; left: 25%; color: whitesmoke;"
+  >
+    {% include 'footer.html' %}
+  </footer>
 </body>
 {% endblock %}

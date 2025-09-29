@@ -11,10 +11,12 @@
   color: black;
 }
 
-section, div, article {
-    background: transparent;
-    border: none;
-    box-shadow: none;
+section,
+div,
+article {
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .navbar .nav-link.active {
@@ -41,6 +43,38 @@ body.bg-black .nav-link {
 .navbar-transparent {
   background-color: transparent !important;
   box-shadow: none !important;
+}
+
+.header-custom {
+  position: relative;
+  top: 10px;
+  transform: translateX(-50%);
+  width: max-content;
+  z-index: 1000;
+}
+
+.footer-custom {
+  position: relative;
+  top: 15px;
+  bottom: 10px;
+  transform: translateX(-50%);
+  width: max-content;
+  z-index: 1000;
+}
+
+.text-pos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.contact-content {
+  margin-left: 70px;
+  margin-top: 40px;
 }
 
 .fade-in {

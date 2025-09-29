@@ -1,0 +1,6 @@
+# Ignore environment file
+.env
+
+# Ignore whole folders
+venv/
+__pycache__/
