@@ -23,6 +23,3 @@ Welcome to my personal portfolio website! This project showcases my skills as a 
 - Flask
 - HTML5 & CSS3
 - Bootstrap 5
-- JavaScript (for interactive features)
-```bash
-git clone https://github.com/Kasra36/my-portfolio-website.git
