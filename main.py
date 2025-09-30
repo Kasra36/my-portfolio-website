@@ -43,7 +43,9 @@ def contact():
             msg['From'] = EMAIL_USER
             msg['To'] = EMAIL_USER
             msg['Subject'] = 'Portfolio Website User Message'
-            msg.attach(MIMEText(message_content, 'plain'))
+            body = f"Message from: {request.form.get('email')}\n\n{message_content}"
+            msg.attach(MIMEText(body, 'plain'))
+        
 
             context = ssl.create_default_context()
             with smtplib.SMTP_SSL(EMAIL_HOST, EMAIL_PORT, context=context) as server:
@@ -51,12 +53,12 @@ def contact():
                 server.sendmail(EMAIL_USER, EMAIL_USER, msg.as_string())
 
             flash('Message sent successfully!', 'success')
-            return redirect(url_for('contact'))
+            return redirect(url_for('home'))
         
         except Exception as e:
             print(e)
             flash('Failed to send message', 'error')
-            return redirect(url_for('contact'))
+            return redirect(url_for('home'))
 
     return render_template("contact.html")
 

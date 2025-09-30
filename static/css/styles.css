@@ -74,10 +74,9 @@ body {
 
 .contact-content {
   margin-left: 70px;
-  margin-top: 40px;
 }
 
-.fade-in {
+/* .fade-in {
   opacity: 0;
   animation: fadeIn 1s forwards;
 }
@@ -86,4 +85,4 @@ body {
   to {
     opacity: 1;
   }
-}
+} */

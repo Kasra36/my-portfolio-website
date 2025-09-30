@@ -1,21 +1,24 @@
 {% extends 'base.html' %} {% block content %}
 
 <body style="background-color: whitesmoke">
-  <header class="row header-custom" style="left: 50%">
+  <header class="header-custom" style="left: 25%">
     {% include 'header.html' %}
   </header>
-  <main class="contact-content">
-    <div class="row" style="min-height: 70vh">
-      <div class="col-6 d-flex flex-column justify-content-start">
-        <div class="mb-5">
-          <h1 class="home-head-font display-5" style="color: rgb(91, 204, 249)">
-            Don't miss the chance
-          </h1>
-          <h1 class="home-head-font display-1" style="color: rgb(91, 204, 249)">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to connect..!
-          </h1>
-        </div>
-        <div class="mt-5" style="padding-right: 4%">
+  <main class="contact-content" style="padding-left: 4%;">
+    <div class="mt-5 d-flex flex-column justify-content-start">
+      <div class="row" style="">
+        <h1
+          class="home-head-font display-5 align-items-start"
+          style="color: rgb(91, 204, 249)"
+        >
+          Don't miss the chance
+        </h1>
+        <h1 class="home-head-font display-1" style="color: rgb(91, 204, 249)">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to connect..!
+        </h1>
+      </div>
+      <div class="row mb-4">
+        <div class="col-6" style="padding-top: 5%; padding-right: 3%">
           <h6>
             I’m always open to new opportunities, collaborations, or simply
             connecting with like-minded people. Whether you’d like to discuss a
@@ -24,38 +27,61 @@
             my best to respond promptly. Let’s build something meaningful
             together.
           </h6>
+          <h5 class="home-head-font" style="padding-top: 5%">
+            Eagerly waiting to hear from you..
+          </h5>
         </div>
-      </div>
-      <div class="col-6 d-flex align-items-center" style="padding-right: 5%">
-        <form action="/contact" method="POST" class="w-100">
-          <div>
-            <label
-              for="message"
-              class="form-label d-flex justify-content-start home-head-font"
-              >Eagerly waiting to hear from you..</label
+        <div class="col-6" style="width: 600px; height: 300px;">
+          <form
+            action="/contact"
+            method="POST"
+            style="width: 600px; height: 300px; display: flex; margin-left: 10%;"
+          >
+            <div
+              style="
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+              "
             >
-            <textarea
-              class="form-control"
-              id="message"
-              name="message"
-              rows="12"
-              placeholder="Write your message here..."
-              required
-            ></textarea>
-          </div>
-          <div class="d-flex justify-content-end">
-            <button type="submit" class="btn">
-              <img
-                src="{{ url_for('static', filename='assets/send.svg') }}"
-                style="width: 80px; height: 80px"
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="youremail@example.com"
               />
-            </button>
-          </div>
-        </form>
+              <textarea
+                class="form-control flex-grow-1"
+                id="message"
+                name="message"
+                placeholder="Write your message here..."
+                required
+                style="height: 100%"
+              ></textarea>
+            </div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 10px;
+              "
+            >
+              <button type="submit" class="btn">
+                <img
+                  src="{{ url_for('static', filename='assets/send.svg') }}"
+                  style="width: 80px; height: 80px"
+                />
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </main>
-  <footer class="row footer-custom" style="left: 50%">
+  <footer class="footer-custom" style="left: 50%">
     {% include 'footer.html' %}
   </footer>
 </body>
